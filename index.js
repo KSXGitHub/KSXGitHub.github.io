@@ -15,4 +15,8 @@ function main(){
 	return 0;
 }
 
+function button_onClick(event){
+	alert("Hello World!!");
+}
+
 main();
