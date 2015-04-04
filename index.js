@@ -11,7 +11,7 @@ function main(){
 	bodyElement.insertBefore(buttonContainer, null);
 	tipElement.insertBefore(tipText, null);
 	buttonContainer.insertBefore(button, null);
-	button.insertBefore(tipText, null);
+	button.insertBefore(buttonText, null);
 	return 0;
 }
 
