@@ -28,6 +28,9 @@ function main() {
   
   // Set event for the main button
   document.getElementById("confirm-button").addEventListener("click", calculate, false);
+  document.addEventListener("keydown", function (event) {
+    event.keyCode == 13 && calculate();
+  }, false);
 
 }
 
