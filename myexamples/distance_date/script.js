@@ -11,6 +11,7 @@ function main() {
   var year2 = document.getElementById("year2");
   var month2 = document.getElementById("month2");
   var day2 = document.getElementById("day2");
+  var result = document.getElementById("result");
   
   // Function
   function createDateFrom3HTMLInputElements(year, month, day) {
@@ -21,8 +22,8 @@ function main() {
   function calculate() {
     var date1 = createDateFrom3HTMLInputElements(year1, month1, day1);
     var date2 = createDateFrom3HTMLInputElements(year2, month2, day2);
-    var distance = date2 - date1;
-    
+    var distance = Number(date2) - Number(date1);
+    result.textContent = String(distance / GET_DAY);
   }
   
   // Set event for the main button
