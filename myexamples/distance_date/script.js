@@ -23,7 +23,7 @@ function main() {
     var date1 = createDateFrom3HTMLInputElements(year1, month1, day1);
     var date2 = createDateFrom3HTMLInputElements(year2, month2, day2);
     var distance = Number(date2) - Number(date1);
-    result.textContent = String(distance / GET_DAY);
+    result.textContent = "# of Days: " + String(distance / GET_DAY);
   }
   
   // Set event for the main button
