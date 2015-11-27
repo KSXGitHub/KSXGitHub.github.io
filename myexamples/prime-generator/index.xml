@@ -9,7 +9,7 @@
   <body>
     <div>
       <span>Number of primes: </span>
-      <input id="input" type="number" placeholder="integer" title="Enter a positive integer to make the list longer and a negative for otherwise.&13;Length of the list must be a positive integer." />
+      <input id="input" type="number" placeholder="integer" title="Enter a positive integer to make the list longer and a negative for otherwise.&#13;&#10;Length of the list must be a positive integer." />
       <button id="addprime">Add to list</button>
       <button id="reset">Reset list</button>
     </div>
