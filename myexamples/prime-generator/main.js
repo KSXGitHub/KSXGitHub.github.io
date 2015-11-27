@@ -8,6 +8,7 @@
   var primegen = new PrimeGenerator();
   var out = [2];
   
+  input.addEventListener('keydown', event => event.keyCode === 13 && add(), false);
   document.getElementById('addprime').addEventListener('click', add, false);
   document.getElementById('reset').addEventListener('click', reset, false);
   
