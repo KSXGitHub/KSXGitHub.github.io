@@ -5,8 +5,11 @@
   var input = document.getElementById('input');
   var output = document.getElementById('output');
   var gettxt = document.getElementById('gettxt');
+  var primegen;
   
   input.addEventListener('change', onchange, false);
+  
+  refresh();
   
   function onchange() {
     
@@ -25,7 +28,7 @@
     var out = [2];
     gettxt.download = String(n) + "primes.txt";
     
-    for (let prime of new PrimeGenerator()) {
+    for (let prime of primegen) {
       --n;
       if (!n) {
         break;
@@ -37,6 +40,10 @@
     output.textContent = outtext;
     gettxt.href = URL.createObjectURL(new Blob([outtext]), {type: 'text/plain'});
     
+  }
+  
+  function refresh() {
+    primegen = new PrimeGenerator();
   }
   
 })(document);
