@@ -8,7 +8,7 @@
   <body>
     <div>
       <span>Number of primes: </span>
-      <input id="input" type="number" placeholder="integer" />
+      <input id="input" type="number" placeholder="integer" style="text-align: right;" />
     </div>
     <div id="output" />
     <script type="text/javascript" src="prime.js" />
