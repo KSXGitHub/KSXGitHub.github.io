@@ -10,7 +10,7 @@
   
   input.addEventListener('change', onchange, false);
   
-  refresh();
+  reset();
   
   function onchange() {
     
@@ -29,10 +29,10 @@
     gettxt.download = String(out.length) + "primes.txt";
     
     for (let prime of primegen) {
-      --n;
       if (!n) {
         break;
       }
+      --n;
       out.push(prime);
     }
     
@@ -42,7 +42,7 @@
     
   }
   
-  function refresh() {
+  function reset() {
     primegen = new PrimeGenerator();
     out = [2];
   }
