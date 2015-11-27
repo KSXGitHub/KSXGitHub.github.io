@@ -4,6 +4,10 @@
   font-family: 'consolas';
 }
 
+.hidden {
+  display: none!important;
+}
+
 input[type="number"] {
   text-align: right;
 }
