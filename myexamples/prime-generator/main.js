@@ -29,7 +29,7 @@
     
     if (n < 0) {
       
-      out.length -= n;
+      out.length += n;
       
     } else {
       
