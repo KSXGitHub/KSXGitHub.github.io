@@ -6,6 +6,7 @@
   var output = document.getElementById('output');
   var gettxt = document.getElementById('gettxt');
   var primegen;
+  var out;
   
   input.addEventListener('change', onchange, false);
   
@@ -25,8 +26,7 @@
     output.classList.remove('error');
     gettxt.classList.remove('hidden');
     
-    var out = [2];
-    gettxt.download = String(n) + "primes.txt";
+    gettxt.download = String(out.length) + "primes.txt";
     
     for (let prime of primegen) {
       --n;
@@ -44,6 +44,7 @@
   
   function refresh() {
     primegen = new PrimeGenerator();
+    out = [2];
   }
   
 })(document);
