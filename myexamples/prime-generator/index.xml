@@ -4,11 +4,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>Prime Generator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div>
       <span>Number of primes: </span>
-      <input id="input" type="number" placeholder="integer" style="text-align: right;" />
+      <input id="input" type="number" placeholder="positive integer" />
     </div>
     <div id="output" />
     <script type="text/javascript" src="prime.js" />
