@@ -10,11 +10,13 @@
     <div>
       <span>Number of primes: </span>
       <input id="input" type="number" placeholder="positive integer" />
+      <button id="addprime">Add to list</button>
+      <button id="reset">Reset list</button>
     </div>
     <div>
       <a id="gettxt" class="hidden" href="#" download="primes.txt">Get txt file</a>
     </div>
-    <div id="output" />
+    <div id="output">2</div>
     <script type="text/javascript" src="prime.js" />
     <script type="text/javascript" src="main.js" />
   </body>
