@@ -1,11 +1,11 @@
 
 function main(out) {
-  'use strict';
-  
-  class PrimeGenerator {
-    
-    constructor(List, loop) {
-      
+	'use strict';
+	
+	class PrimeGenerator {
+		
+		constructor(List, loop) {
+			
 			if (typeof List !== "function") {
 				List = Set;
 			}
@@ -45,12 +45,12 @@ function main(out) {
 			
 			}
 			
-    }
-    
-  }
-  
-  out.PrimeGenerator = PrimeGenerator;
-  
+		}
+		
+	}
+	
+	out.PrimeGenerator = PrimeGenerator;
+	
 }
 
 main(window);
