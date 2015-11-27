@@ -12,7 +12,7 @@
 
 ### Constructor
 ```javascript
-  primegen = new PrimeGenerator(listclass, loopcondition);
+  new PrimeGenerator(listclass, loopcondition);
 ```
  - Parameter `listclass` is a constructor/class which should create an iterable object, this object must have `.add(element)` method. If `listclass` was not be specified, use 'Set' by default.
  - Parameter `loopcondition` is a function: `loopcondition(n)`
