@@ -1,11 +1,11 @@
 
 # Prime Generator
 
-## Ideal of algorithm
+## Idea of algorithm
  - Any number which is not divisible by any less prime number is a prime number
  - The only even prime number is 2, so, only check odd numbers
 
-## Ideal of program structure
+## Idea of program structure
  - ECMAScript 2015 provides `for...of` loop to iterate iterable object, `prime.js` provides class `PrimeGenerator`, which used to create an iterable object for primes
 
 ## Usage of `PrimeGenerator`
