@@ -4,10 +4,10 @@
   font-family: 'consolas';
 }
 
-input [type="number"] {
+input[type="number"] {
   text-align: right;
 }
 
-.error {
+div.error {
   color: red;
 }
