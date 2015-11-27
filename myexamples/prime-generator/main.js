@@ -9,7 +9,7 @@
   var out = [2];
   
   document.getElementById('addprime').addEventListener('click', add, false);
-  document.getElementById('reset').addEventListener('reset', reset, false);
+  document.getElementById('reset').addEventListener('click', reset, false);
   
   reset();
   
