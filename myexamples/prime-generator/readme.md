@@ -15,10 +15,7 @@
   new PrimeGenerator(listclass, loopcondition);
 ```
  - Parameter `listclass` is a constructor/class which should create an iterable object, this object must have `.add(element)` method. If `listclass` was not be specified, use 'Set' by default.
- - Parameter `loopcondition` is a function. If `loopcondition` was not be specified, use `() => true` by default.
-```javascript
-    loopcondition(n);
-```
+ - Parameter `loopcondition` is a function, which receives `n` as the only argument, and returns a boolean. If `loopcondition` was not be specified, use `() => true` by default.
   - Parameter `n`: current checking potential odd number.
   - Return value: if `false`, the iterating process will stop, `true` for otherwise.
  - Return value: an object of `PrimeGenerator`.
