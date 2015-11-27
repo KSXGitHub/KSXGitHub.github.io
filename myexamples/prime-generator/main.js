@@ -18,7 +18,7 @@
     
     var n = parseInt(input.value);
     
-    if (!isFinite(n) || out.length + n < 1) {
+    if (!isFinite(n) || n < 0) {
       output.textContent = "Invalid input";
       output.classList.add('error');
       gettxt.classList.add('hidden');
@@ -28,20 +28,12 @@
     output.classList.remove('error');
     gettxt.classList.remove('hidden');
     
-    if (n < 0) {
-      
-      out.length += n;
-      
-    } else {
-      
-      for (let prime of primegen) {
-        if (!n) {
-          break;
-        }
-        --n;
-        out.push(prime);
+    for (let prime of primegen) {
+      if (!n) {
+        break;
       }
-      
+      --n;
+      out.push(prime);
     }
     
     var outtext = out.join(', ');
