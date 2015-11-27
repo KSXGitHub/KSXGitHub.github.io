@@ -13,8 +13,11 @@
     
     if (!isFinite(n) || n < 1) {
       output.textContent = "Invalid input";
+      output.classList.add('error');
       return;
     }
+    
+    output.classList.remove('error');
     
     var out = [2];
     
