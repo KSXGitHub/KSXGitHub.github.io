@@ -4,6 +4,7 @@
   
   var input = document.getElementById('input');
   var output = document.getElementById('output');
+  var gettxt = document.getElementById('gettxt');
   
   input.addEventListener('change', onchange, false);
   
@@ -14,10 +15,12 @@
     if (!isFinite(n) || n < 1) {
       output.textContent = "Invalid input";
       output.classList.add('error');
+      gettxt.classList.add('hidden');
       return;
     }
     
     output.classList.remove('error');
+    gettxt.classList.remove('hidden');
     
     var out = [2];
     
@@ -29,7 +32,9 @@
       out.push(prime);
     }
     
-    output.textContent = out.join(', ');
+    var outtext = out.join(', ');
+    output.textContent = outtext;
+    gettxt.href = URL.createObjectURL(new Blob([outtext]), {type: 'text/plain'});
     
   }
   
