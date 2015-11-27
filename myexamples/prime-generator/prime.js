@@ -21,6 +21,7 @@ function main(out) {
 			reset();
 			
 			primegenerator[Symbol.iterator] = primegenerator.entries = PrimeIterator;
+			primegenerator.reset = reset;
 			
 			function * PrimeIterator() {
 					
