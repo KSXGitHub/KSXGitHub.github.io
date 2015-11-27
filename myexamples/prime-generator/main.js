@@ -8,11 +8,12 @@
   var primegen = new PrimeGenerator();
   var out = [2];
   
-  input.addEventListener('change', onchange, false);
+  document.getElementById('addprime').addEventListener('click', add, false);
+  document.getElementById('reset').addEventListener('reset', reset, false);
   
   reset();
   
-  function onchange() {
+  function add() {
     
     var n = parseInt(input.value);
     
