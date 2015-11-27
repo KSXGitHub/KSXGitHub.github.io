@@ -11,6 +11,9 @@
       <span>Number of primes: </span>
       <input id="input" type="number" placeholder="positive integer" />
     </div>
+    <div>
+      <a id="gettxt" class="hidden" href="#" target="_blank">Get txt file</a>
+    </div>
     <div id="output" />
     <script type="text/javascript" src="prime.js" />
     <script type="text/javascript" src="main.js" />
