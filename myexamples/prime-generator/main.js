@@ -35,6 +35,7 @@
     var outtext = out.join(', ');
     output.textContent = outtext;
     gettxt.href = URL.createObjectURL(new Blob([outtext]), {type: 'text/plain'});
+    gettxt.download = String(n) + "primes.txt";
     
   }
   
