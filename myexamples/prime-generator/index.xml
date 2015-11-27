@@ -1,1 +1,17 @@
-
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prime Generator</title>
+  </head>
+  <body>
+    <div>
+      <span>Number of primes: </span>
+      <input id="input" type="number" placeholder="integer" />
+    </div>
+    <div id="output" />
+    <script type="text/javascript" src="prime.js" />
+    <script type="text/javascript" src="main.js" />
+  </body>
+</html>
