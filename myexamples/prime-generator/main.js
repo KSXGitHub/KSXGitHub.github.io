@@ -23,6 +23,7 @@
     gettxt.classList.remove('hidden');
     
     var out = [2];
+    gettxt.download = String(n) + "primes.txt";
     
     for (let prime of new PrimeGenerator()) {
       --n;
@@ -35,7 +36,6 @@
     var outtext = out.join(', ');
     output.textContent = outtext;
     gettxt.href = URL.createObjectURL(new Blob([outtext]), {type: 'text/plain'});
-    gettxt.download = String(n) + "primes.txt";
     
   }
   
