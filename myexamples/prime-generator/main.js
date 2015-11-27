@@ -5,8 +5,8 @@
   var input = document.getElementById('input');
   var output = document.getElementById('output');
   var gettxt = document.getElementById('gettxt');
-  var primegen;
-  var out;
+  var primegen = new PrimeGenerator();
+  var out = [2];
   
   input.addEventListener('change', onchange, false);
   
@@ -43,8 +43,8 @@
   }
   
   function reset() {
-    primegen = new PrimeGenerator();
-    out = [2];
+    primegen.reset();
+    out.length = 1;
   }
   
 })(document);
