@@ -11,24 +11,19 @@
     
     var n = parseInt(input.value);
     
-    if (!isFinite(n)) {
+    if (!isFinite(n) || n < 1) {
       output.textContent = "Invalid input";
-      return;
-    }
-    
-    if (n < 2) {
-      output.textContent = "No prime less than 2";
       return;
     }
     
     var out = [2];
     
     for (let prime of new PrimeGenerator()) {
+      --n;
       if (!n) {
         break;
       }
       out.push(prime);
-      --n;
     }
     
     output.textContent = out.join(', ');
