@@ -17,7 +17,7 @@
     
     var n = parseInt(input.value);
     
-    if (!isFinite(n) || n < 1) {
+    if (!isFinite(n) || out.length + n < 1) {
       output.textContent = "Invalid input";
       output.classList.add('error');
       gettxt.classList.add('hidden');
@@ -27,18 +27,25 @@
     output.classList.remove('error');
     gettxt.classList.remove('hidden');
     
-    gettxt.download = String(out.length) + "primes.txt";
-    
-    for (let prime of primegen) {
-      if (!n) {
-        break;
+    if (n < 0) {
+      
+      out.length -= n;
+      
+    } else {
+      
+      for (let prime of primegen) {
+        if (!n) {
+          break;
+        }
+        --n;
+        out.push(prime);
       }
-      --n;
-      out.push(prime);
+      
     }
     
     var outtext = out.join(', ');
     output.textContent = outtext;
+    gettxt.download = String(out.length) + "primes.txt";
     gettxt.href = URL.createObjectURL(new Blob([outtext]), {type: 'text/plain'});
     
   }
