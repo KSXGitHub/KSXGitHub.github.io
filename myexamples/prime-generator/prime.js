@@ -15,8 +15,10 @@ function main(out) {
 			}
 			
 			var primegenerator = this;
-			var allprimes = new List();
-			var current = 3;
+			var allprimes;
+			var current;
+			
+			reset();
 			
 			primegenerator[Symbol.iterator] = primegenerator.entries = PrimeIterator;
 			
@@ -42,6 +44,11 @@ function main(out) {
 				
 				}
 			
+			}
+			
+			function reset() {
+				allprimes = new List();
+				current = 3;
 			}
 			
 		}
