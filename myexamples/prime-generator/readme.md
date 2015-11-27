@@ -20,11 +20,11 @@
   - Return value: if `false`, the iterating process will stop, `true` for otherwise.
  - Return value: an object of `PrimeGenerator`.
  
- ### Object usage
- ```javascript
-   for (let prime of primegen) {
-    statements;
-   }
- ```
-  - `primegen` is an object of class `PrimeGenerator`.
-  - `prime` is a prime number (greater than 2).
+### Object usage
+```javascript
+  for (let prime of primegen) {
+   statements;
+  }
+```
+ - `primegen` is an object of class `PrimeGenerator`.
+ - `prime` is a prime number (greater than 2).
