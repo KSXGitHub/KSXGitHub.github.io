@@ -20,6 +20,7 @@ function main(out) {
 			
 			function * PrimeIterator() {
 			
+				console.log('one');
 				var allprimes = new List();
 				var current = 3;
 					
