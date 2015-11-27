@@ -18,7 +18,7 @@ function main(out) {
 			var allprimes = new List();
 			var current = 3;
 			
-			primegenerator[Symbol.iterator] = primegenerator.begin = PrimeIterator;
+			primegenerator[Symbol.iterator] = primegenerator.entries = PrimeIterator;
 			
 			function * PrimeIterator() {
 					
