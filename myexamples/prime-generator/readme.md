@@ -1,4 +1,15 @@
 
+# Prime Number Definition
+
+## Common definition
+ - A **prime number** (or a **prime**) is a natural number greater than 1 that has no positive divisor other than 1 and itself, a natural number greater than 1 that is not a prime number is called a *composite number*.
+ - Source: https://en.wikipedia.org/wiki/Prime_number
+ 
+## Equivalent definition (which is used in this algorithm)
+ - 0 and 1 are not prime numbers.
+ - 2 is a prime number.
+ - A prime number is a natural number greater than 1 which has no prime divisor other than itself.
+
 # Prime Generator
 
 ## Idea of algorithm
