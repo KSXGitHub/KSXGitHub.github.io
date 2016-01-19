@@ -16,3 +16,8 @@ input[type="number"] {
 div.error {
   color: red;
 }
+
+#time {
+  font-family: 'consolas', 'Lucida Console', 'Courier New', monospace;
+  color: red;
+}
