@@ -29,13 +29,20 @@ function main(out) {
 				for ( ; loop(current); current += 2) {
 					
 					let isprime = 1;
+					let squared = current * current;
 					
 					// Loop: "Find Composite"
 					for (let divisor of allprimes) {
+						
 						if (!(current % divisor)) {
 							isprime = 0;
 							break; // Escape "Find Composite", go to the rest of "Find Prime"
 						}
+						
+						if (divisor * divisor >= squared) {
+							break;
+						}
+						
 					}
 					
 					if (isprime) {
