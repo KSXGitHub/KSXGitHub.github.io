@@ -53,6 +53,7 @@
     out.length = 1;
     output.textContent = '2';
     gettxt.classList.add('hidden');
+    time.textContent = '';
   }
   
 })(document);
