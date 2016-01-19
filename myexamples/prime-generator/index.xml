@@ -16,8 +16,8 @@
     <div>
       <a id="gettxt" class="hidden" href="#" download="primes.txt">Get txt file</a>
     </div>
-    <div id="output">2</div>
     <div id="time"></div>
+    <div id="output">2</div>
     <script type="text/javascript" src="prime.js" />
     <script type="text/javascript" src="main.js" />
   </body>
