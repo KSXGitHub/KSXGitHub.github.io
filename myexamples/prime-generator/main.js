@@ -42,7 +42,7 @@
     
     var outtext = out.join(', ');
     output.textContent = outtext;
-    time.textContent = `${startTimePoint - Date.now()} ms`;
+    time.textContent = `${Date.now() - startTimePoint} ms`;
     gettxt.download = `${out.length}primes.txt`;
     gettxt.href = URL.createObjectURL(new Blob([outtext]), {type: 'text/plain'});
     
