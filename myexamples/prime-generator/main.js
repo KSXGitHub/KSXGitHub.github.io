@@ -5,6 +5,7 @@
   var input = document.getElementById('input');
   var output = document.getElementById('output');
   var gettxt = document.getElementById('gettxt');
+  var time = document.getElementById('time');
   var primegen = new PrimeGenerator();
   var out = [2];
   
@@ -22,11 +23,14 @@
       output.textContent = "Invalid input";
       output.classList.add('error');
       gettxt.classList.add('hidden');
+      time.textContent = '';
       return;
     }
     
     output.classList.remove('error');
     gettxt.classList.remove('hidden');
+    
+    var startTimePoint = Date.now();
     
     for (let prime of primegen) {
       if (!n) {
@@ -38,7 +42,8 @@
     
     var outtext = out.join(', ');
     output.textContent = outtext;
-    gettxt.download = String(out.length) + "primes.txt";
+    time.textContent = `${startTimePoint - Date.now()} ms`;
+    gettxt.download = `${out.length}primes.txt`;
     gettxt.href = URL.createObjectURL(new Blob([outtext]), {type: 'text/plain'});
     
   }
