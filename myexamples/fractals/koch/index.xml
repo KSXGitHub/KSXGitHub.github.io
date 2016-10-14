@@ -1,18 +1,20 @@
 <?xml version = "1.0" encoding = "UTF-8" ?>
-<head>
-  <meta charset = "UTF-8" />
-  <title>Fractals</title>
-</head>
-<body>
-  <p>
-    <h1>Fractals</h1>
-  </p>
-  <p>
-    Loop (unsigned int):
-    <input id = "main-input" type = "number" value = "10" />
-    <button id = "calc">Render</button>
-  </p>
-  <p>
-    <canvas id = "main-canvas" src = "script.js" />
-  </p>
-</body>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset = "UTF-8" />
+    <title>Fractals</title>
+  </head>
+  <body>
+    <p>
+      <h1>Fractals</h1>
+    </p>
+    <p>
+      Loop (unsigned int):
+      <input id = "main-input" type = "number" value = "10" />
+      <button id = "calc">Render</button>
+    </p>
+    <p>
+      <canvas id = "main-canvas" src = "script.js" />
+    </p>
+  </body>
+</html>
