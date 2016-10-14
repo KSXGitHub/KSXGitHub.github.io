@@ -2,7 +2,7 @@
 
 main(window)
 
-function main ({Math: {sqrt, sin, cos, PI}, document}) {
+function main ({Math: {sqrt, sin, cos, PI}, parseInt, document}) {
   const triangleheight = sqrt(3) / 2
   const rotate = alpha => (x, y) => {
     const sa = sin(alpha)
@@ -40,13 +40,13 @@ function main ({Math: {sqrt, sin, cos, PI}, document}) {
   const canvas = document.getElementById('main-canvas')
   const csize = canvas.width = canvas.height = 1024
   const context = canvas.getContext('2d')
-  context.stroke = 'red'
-  context.fill = 'yellow'
+  context.strokeStyle = 'red'
+  context.fillStyle = 'yellow'
   context.lineWidth = 1
   const input = document.getElementById('main-input')
   const button = document.getElementById('calc')
   function onclick () {
-    const [begin, ...rest] = [...koch(PI / 3), parseInt(input.value)]
+    const [begin, ...rest] = [...koch(PI / 3, parseInt(input.value))]
     context.clearRect(0, 0, csize, csize)
     context.beginPath()
     context.moveTo(...begin)
