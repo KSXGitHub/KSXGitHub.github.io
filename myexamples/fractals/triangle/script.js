@@ -26,7 +26,7 @@ function main ({Math: {sqrt, sin, cos, PI}, document}) {
         .map(([x, y]) => [x / 3 + 2 / 3, y / 3])
     }
   }
-  function * koch (count) {
+  function * koch (alpha, count) {
     
   }
   const canvas = document.getElementById('canvas')
