@@ -36,8 +36,9 @@ function main ({Math: {sqrt, sin, cos, PI}, document}) {
     yield * [...fractal(alpha + PI * 5 / 3, count)].map(div3)
     yield [0, triangleheight * 2 / 3]
   }
-  const canvas = document.getElementById('canvas')
+  const canvas = document.getElementById('main-canvas')
   const csize = canvas.width = canvas.height = 1024
   const context = canvas.getContext('2d')
-  const input = document.getElementById('input')
+  const input = document.getElementById('main-input')
+  const button = document.getElementById('calc')
 }
