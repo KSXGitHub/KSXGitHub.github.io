@@ -27,18 +27,31 @@ function main ({Math: {sqrt, sin, cos, PI}, document}) {
     }
   }
   function * koch (alpha, count) {
+    const rotation = rotate(alpha)
     const div3 = ([x, y]) => [x / 3, y / 3]
-    yield [0, triangleheight * 2 / 3]
+    yield rotation(0, triangleheight * 2 / 3)
     yield * [...fractal(alpha + PI / 3, count)].map(div3)
-    yield [1 / 2, - triangleheight / 3]
+    yield rotation(- 1 / 2, - triangleheight / 3)
     yield * [...fractal(alpha + PI, count)].map(div3)
-    yield [- 1 / 2, - triangleheight / 3]
+    yield rotation(1 / 2, - triangleheight / 3)
     yield * [...fractal(alpha + PI * 5 / 3, count)].map(div3)
-    yield [0, triangleheight * 2 / 3]
+    yield rotation(0, triangleheight * 2 / 3)
+  }
+  function onclick () {
+    const path = [...koch(PI / 3)]
+    context.clearRect(0, 0, csize, csize)
+    context.beginPath()
+    context.closePath()
+    context.fill()
+    context.stroke()
   }
   const canvas = document.getElementById('main-canvas')
   const csize = canvas.width = canvas.height = 1024
   const context = canvas.getContext('2d')
+  context.stroke = 'red'
+  context.fill = 'yellow'
+  context.lineWidth = 1
   const input = document.getElementById('main-input')
   const button = document.getElementById('calc')
+  button.addEventListener('click', onclick, false)
 }
