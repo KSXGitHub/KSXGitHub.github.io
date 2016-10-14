@@ -10,7 +10,7 @@ function main ({Math: {sqrt, sin, cos, PI}, document}) {
     return [x * ca - y * sa, x * sa + y * ca]
   }
   function * fractal (alpha, count) {
-    if (count) {
+    if (count > 0) {
       const rotation = rotate(alpha)
       const next = [...fractal(alpha, count - 1)]
       yield * next
@@ -37,14 +37,6 @@ function main ({Math: {sqrt, sin, cos, PI}, document}) {
     yield * [...fractal(alpha + PI * 5 / 3, count)].map(div3)
     yield rotation(0, triangleheight * 2 / 3)
   }
-  function onclick () {
-    const path = [...koch(PI / 3)]
-    context.clearRect(0, 0, csize, csize)
-    context.beginPath()
-    context.closePath()
-    context.fill()
-    context.stroke()
-  }
   const canvas = document.getElementById('main-canvas')
   const csize = canvas.width = canvas.height = 1024
   const context = canvas.getContext('2d')
@@ -53,5 +45,15 @@ function main ({Math: {sqrt, sin, cos, PI}, document}) {
   context.lineWidth = 1
   const input = document.getElementById('main-input')
   const button = document.getElementById('calc')
+  function onclick () {
+    const [begin, ...rest] = [...koch(PI / 3), parseInt(input.value)]
+    context.clearRect(0, 0, csize, csize)
+    context.beginPath()
+    context.moveTo(...begin)
+    rest.forEach(([x, y]) => context.lineTo(x, y))
+    context.closePath()
+    context.fill()
+    context.stroke()
+  }
   button.addEventListener('click', onclick, false)
 }
