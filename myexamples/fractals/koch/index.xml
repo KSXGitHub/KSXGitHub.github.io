@@ -15,7 +15,8 @@
       <button id = "calc">Render</button>
     </p>
     <p>
-      <canvas id = "main-canvas" src = "script.js" />
+      <canvas id = "main-canvas" />
     </p>
+    <script type = "text/javascript" src = "script.js" />
   </body>
 </html>
