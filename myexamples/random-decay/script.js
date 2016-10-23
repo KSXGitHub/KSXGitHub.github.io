@@ -7,7 +7,7 @@ const range = (begin, end) =>
   begin < end ? [begin, ...range(begin + 1, end)] : []
 
 const decay = (array, delay, chance, callback = DONOTHING, formal = []) => {
-  const timer = setTimeout(decay, delay, array.filter(() => random() < chance), callback, [array, ...formal]))
+  const timer = setTimeout(decay, delay, array.filter(() => random() < chance), callback, [array, ...formal])
   const response = callback({timer, array, formal})
   return {timer, response}
 }
