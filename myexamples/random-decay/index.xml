@@ -6,6 +6,33 @@
     <meta name = 'subject' content = 'illustration' />
     <meta name = 'author' content = 'Hoàng Văn Khải, hvksmr1996@gmail.com' />
     <meta name = 'Classification' content = 'Math' />
+    <link rel = 'stylesheet' href = 'style.css' />
     <title>Random Decay</title>
   </head>
+  <body>
+    <table class = 'main'>
+      <tr>
+        <th>Control</th>
+        <th>Output</th>
+      </tr>
+      <tbody><tr>
+        <td>
+          <div>
+            <span>Count: </span>
+            <input id = 'count' type = 'number' value = '10' />
+          </div>
+          <div>
+            <span>Chance: </span>
+            <input id = 'chance' type = 'text' value = '0.5' />
+          </div>
+          <div>
+            
+          </div>
+        </td>
+        <td>
+          <div id = 'output' />
+        </td>
+      </tr></tbody>
+    </table>
+  </body>
 </html>
