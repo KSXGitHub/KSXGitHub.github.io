@@ -31,19 +31,24 @@ let timerid = null
 const onStart = () => {
   const paragraph = document.createElementNS(xmlns, 'p')
   const headerdiv = document.createElementNS(xmlns, 'div')
+  log.textContent = ''
   log.appendChild(paragraph)
   paragraph.appendChild(headerdiv)
   headerdiv.innerHTML = `<h3><span>${new Date()}</span></h3>`
   const main = ({timer, array}) => {
-    timerid = timer
-    const div = document.createElementNS(xmlns, 'div')
-    const length = document.createElementNS(xmlns, 'span')
-    const list = document.createElementNS(xmlns, 'span')
-    paragraph.appendChild(div)
-    div.appendChild(length)
-    div.appendChild(list)
-    length.textContent = `(${array.length}) $`
-    list.textContent = array.join(', ')
+    if (array.length) {
+      timerid = timer
+      const div = document.createElementNS(xmlns, 'div')
+      const size = document.createElementNS(xmlns, 'span')
+      const list = document.createElementNS(xmlns, 'span')
+      paragraph.appendChild(div)
+      div.appendChild(length)
+      div.appendChild(list)
+      size.textContent = `(${array.length}) $`
+      list.textContent = array.join(', ')
+    } else {
+      clearTimeout(timer)
+    }
   }
   decay(
     range(0, floor(count.value)),
@@ -55,7 +60,6 @@ const onStart = () => {
 
 const onStop = () => {
   clearTimeout(timerid)
-  log.textContent = ''
 }
 
 turn(start, stop)
