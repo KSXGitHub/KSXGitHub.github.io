@@ -38,12 +38,12 @@ const onStart = () => {
   const main = ({timer, array}) => {
     timerid = timer
     if (array.length) {
-      const div = document.createElementNS(xmlns, 'div')
+      const subparagraph = document.createElementNS(xmlns, 'p')
       const size = document.createElementNS(xmlns, 'span')
       const list = document.createElementNS(xmlns, 'span')
-      paragraph.appendChild(div)
-      div.appendChild(size)
-      div.appendChild(list)
+      paragraph.appendChild(subparagraph)
+      subparagraph.appendChild(size)
+      subparagraph.appendChild(list)
       size.textContent = `(${array.length}) $`
       list.textContent = array.join(', ')
     } else {
