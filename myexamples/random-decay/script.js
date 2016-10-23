@@ -44,8 +44,8 @@ const onStart = () => {
       paragraph.appendChild(subparagraph)
       subparagraph.appendChild(size)
       subparagraph.appendChild(list)
-      size.classname = 'size'
-      list.classname = 'list'
+      size.className = 'size'
+      list.className = 'list'
       size.textContent = `(${array.length}) $ `
       list.textContent = array.join(', ')
     } else {
