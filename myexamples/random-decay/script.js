@@ -32,7 +32,7 @@ const onStart = () => {
   const paragraph = document.createElementNS(xmlns, 'p')
   const begindate = document.createElementNS(xmlns, 'div')
   log.textContent = ''
-  log.appendChild(begindate)
+  log.appendChild(paragraph)
   paragraph.appendChild(begindate)
   begindate.innerHTML = `<h3><span>${new Date()}</span></h3>`
   const main = ({timer, array}) => {
