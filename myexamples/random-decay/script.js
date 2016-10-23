@@ -36,8 +36,8 @@ const onStart = () => {
   paragraph.appendChild(headerdiv)
   headerdiv.innerHTML = `<h3><span>${new Date()}</span></h3>`
   const main = ({timer, array}) => {
+    timerid = timer
     if (array.length) {
-      timerid = timer
       const div = document.createElementNS(xmlns, 'div')
       const size = document.createElementNS(xmlns, 'span')
       const list = document.createElementNS(xmlns, 'span')
@@ -47,7 +47,7 @@ const onStart = () => {
       size.textContent = `(${array.length}) $`
       list.textContent = array.join(', ')
     } else {
-      clearTimeout(timer)
+      stop.click()
     }
   }
   decay(
