@@ -34,7 +34,7 @@ const onStart = () => {
   log.textContent = ''
   log.appendChild(begindate)
   paragraph.appendChild(begindate)
-  headerdiv.innerHTML = `<h3><span>${new Date()}</span></h3>`
+  begindate.innerHTML = `<h3><span>${new Date()}</span></h3>`
   const main = ({timer, array}) => {
     timerid = timer
     if (array.length) {
