@@ -1,3 +1,11 @@
 html, body, .main {
   font-family: 'consolas', 'ubuntu mono', 'lucida console', monospace;
 }
+
+.size {
+  color: red;
+}
+
+.list {
+  color: blue;
+}
