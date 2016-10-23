@@ -6,6 +6,7 @@
     <meta name = 'subject' content = 'illustration' />
     <meta name = 'author' content = 'Hoàng Văn Khải, hvksmr1996@gmail.com' />
     <meta name = 'Classification' content = 'Math' />
+    <link rel = 'shortcut icon' href = 'icon.png' />
     <link rel = 'stylesheet' href = 'style.css' />
     <title>Random Decay</title>
   </head>
@@ -39,6 +40,12 @@
         </td>
       </tr></tbody>
     </table>
+    <p class = 'credit'>
+      <p class = 'author'>
+        <em>Tác giả: </em>
+        <a href = 'http://KSXGitHub.github.io/about-me/'><strong>Hoàng Văn Khải</strong></a>
+      </p>
+    </p>
     <script type = 'text/javascript' src = 'script.js' />
   </body>
 </html>
