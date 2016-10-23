@@ -45,6 +45,12 @@
         <em>Author: </em>
         <a href = 'http://KSXGitHub.github.io/about-me/'><strong>Hoàng Văn Khải</strong></a>
       </p>
+      <p class = 'repo'>
+        <em>Repo: </em>
+        <a href='https://github.com/KSXGitHub/KSXGitHub.github.io/tree/master/myexamples/random-decay'>
+          <span>GitHub → KSXGitHub/KSXGitHub.github.io → /myexamples/random-decay</span>
+        </a>
+      </p>
     </p>
     <script type = 'text/javascript' src = 'script.js' />
   </body>
