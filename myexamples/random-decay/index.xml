@@ -1,1 +1,11 @@
-
+<?xml version = '1.0' encoding = 'utf-8' ?>
+<html xmlns = 'http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta charset = 'utf-8' />
+    <meta name = 'keywords' content = 'radiation, random, probability, decay' />
+    <meta name = 'subject' content = 'illustration' />
+    <meta name = 'author' content = 'Hoàng Văn Khải, hvksmr1996@gmail.com' />
+    <meta name = 'Classification' content = 'Math' />
+    <title>Random Decay</title>
+  </head>
+</html>
