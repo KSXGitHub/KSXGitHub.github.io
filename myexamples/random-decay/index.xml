@@ -26,7 +26,8 @@
             <input id = 'chance' type = 'text' value = '0.5' />
           </div>
           <div>
-            
+            <button id = 'start'>Start</button>
+            <button id = 'stop' disabled = ''>Stop</button>
           </div>
         </td>
         <td>
