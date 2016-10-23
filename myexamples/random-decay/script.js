@@ -12,10 +12,19 @@ const decay = (array, delay, chance, callback = DONOTHING, formal = []) => {
   return {timer, response}
 }
 
+const onClick = (element, handle) =>
+  element.addEventListener('click', handle, false)
+
+const turn = (on, off) =>
+  onClick(on, () => { on.disabled = true; off.disabled = false })
+
 const count = document.getElementById('count')
 const chance = document.getElementById('chance')
 const delay = document.getElementById('delay')
 const log = document.getElementById('log')
 const start = document.getElementById('start')
 const stop = document.getElementById('stop')
+
+turn(start, stop)
+turn(stop, start)
 
