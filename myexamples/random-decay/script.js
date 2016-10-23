@@ -43,7 +43,7 @@ const onStart = () => {
     div.appendChild(length)
     div.appendChild(list)
     length.textContent = array.length
-    content.textContent = array.join(', ')
+    list.textContent = array.join(', ')
   }
   decay(
     range(0, floor(count.value)),
