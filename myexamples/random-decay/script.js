@@ -30,10 +30,10 @@ let timerid = null
 
 const onStart = () => {
   const paragraph = document.createElementNS(xmlns, 'p')
-  const headerdiv = document.createElementNS(xmlns, 'div')
+  const begindate = document.createElementNS(xmlns, 'div')
   log.textContent = ''
-  log.appendChild(paragraph)
-  paragraph.appendChild(headerdiv)
+  log.appendChild(begindate)
+  paragraph.appendChild(begindate)
   headerdiv.innerHTML = `<h3><span>${new Date()}</span></h3>`
   const main = ({timer, array}) => {
     timerid = timer
@@ -61,6 +61,9 @@ const onStart = () => {
 }
 
 const onStop = () => {
+  const paragraph = document.createElementNS('p')
+  log.appendChild(paragraph)
+  p.innerHTML = `<div><h3><span>${new Date()}</span></h3></div>`
   clearTimeout(timerid)
 }
 
