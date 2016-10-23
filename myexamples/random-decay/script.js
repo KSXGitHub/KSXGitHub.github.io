@@ -42,7 +42,7 @@ const onStart = () => {
       const size = document.createElementNS(xmlns, 'span')
       const list = document.createElementNS(xmlns, 'span')
       paragraph.appendChild(div)
-      div.appendChild(length)
+      div.appendChild(size)
       div.appendChild(list)
       size.textContent = `(${array.length}) $`
       list.textContent = array.join(', ')
