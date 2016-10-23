@@ -61,7 +61,7 @@ const onStart = () => {
 }
 
 const onStop = () => {
-  const paragraph = document.createElementNS('p')
+  const paragraph = document.createElementNS(xmlns, 'p')
   log.appendChild(paragraph)
   p.innerHTML = `<div><h3><span>${new Date()}</span></h3></div>`
   clearTimeout(timerid)
