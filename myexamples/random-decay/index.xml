@@ -26,14 +26,19 @@
             <input id = 'chance' type = 'text' value = '0.5' />
           </div>
           <div>
+            <span>Delay (ms): </span>
+            <input id = 'delay' type = 'number' value = '1024' />
+          </div>
+          <div>
             <button id = 'start'>Start</button>
             <button id = 'stop' disabled = ''>Stop</button>
           </div>
         </td>
         <td>
-          <div id = 'output' />
+          <div id = 'log' />
         </td>
       </tr></tbody>
     </table>
+    <script type = 'text/javascript' src = 'script.js' />
   </body>
 </html>
