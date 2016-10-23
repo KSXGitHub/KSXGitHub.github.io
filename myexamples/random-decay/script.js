@@ -14,6 +14,7 @@ const decay = (array, delay, chance, callback = DONOTHING, formal = []) => {
 
 const count = document.getElementById('count')
 const chance = document.getElementById('chance')
+const delay = document.getElementById('delay')
 const log = document.getElementById('log')
 const start = document.getElementById('start')
 const stop = document.getElementById('stop')
