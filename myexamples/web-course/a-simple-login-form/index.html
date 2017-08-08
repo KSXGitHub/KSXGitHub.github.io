@@ -31,7 +31,10 @@
       }
 
       function checkPassword (password) {
-        return [/0-9/, /a-z/, /A-Z/].every(x => x.test(password))
+        const chars = Array.from(password)
+        return chars.some(x => /[0-9]/.test(x)) &&
+          chars.some(x => /[a-z]/.test(x)) &&
+          chars.some(x => /[A-Z]/.test(x))
       }
 
       login.addEventListener('submit', event => {
@@ -41,7 +44,7 @@
           invalid.push('Username')
         }
 
-        if (regexes.sql.test(password.value) && !checkPassword(password.value)) {
+        if (regexes.sql.test(password.value) || !checkPassword(password.value)) {
           invalid.push('Password')
         }
 
