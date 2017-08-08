@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title></title>
+  </head>
+  <body>
+    <form method="post" id="login">
+      <div>
+        <label for="username">Username:</label>
+        <input id="username" type="e-mail">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" minlength="6">
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+    <script type="text/javascript">
+      const login = document.getElementById('login')
+      const username = document.getElementById('username')
+      const password = document.getElementById('password')
+      Object.assign(window, {login, username, password})
+
+      const regexes = {
+        sql: /select|from|insert/i,
+        email: /^[a-zA-Z0-9.\-_]+@[a-zA-Z0-9.\-_]+$/
+      }
+
+      function checkPassword (password) {
+        const chars = Array.from(password)
+        return chars.some(x => /[0-9]/.test(x)) &&
+          chars.some(x => /[a-z]/.test(x)) &&
+          chars.some(x => /[A-Z]/.test(x))
+      }
+
+      login.addEventListener('submit', event => {
+        invalid = []
+
+        if (!regexes.email.test(username.value)) {
+          invalid.push('Username')
+        }
+
+        if (regexes.sql.test(password.value) && !checkPassword(password.value)) {
+          invalid.push('Password')
+        }
+
+        if (invalid.length) {
+          event.preventDefault()
+          window.alert(`ERROR: Invalid field: ${invalid.join(' and ')}`)
+        }
+      }, false)
+    </script>
+  </body>
+</html>
