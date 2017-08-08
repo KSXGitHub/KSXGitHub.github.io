@@ -31,10 +31,7 @@
       }
 
       function checkPassword (password) {
-        const chars = Array.from(password)
-        return chars.some(x => /[0-9]/.test(x)) &&
-          chars.some(x => /[a-z]/.test(x)) &&
-          chars.some(x => /[A-Z]/.test(x))
+        return [/0-9/, /a-z/, /A-Z/].every(x => x.test(password))
       }
 
       login.addEventListener('submit', event => {
